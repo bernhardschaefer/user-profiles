@@ -5,7 +5,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose'); //MongoDB integration
 
-var UserModel = require('./models/user');
+var user = require('./routes/users');
 
 // Configure server
 app.use(bodyParser.json());
@@ -19,15 +19,7 @@ mongoose.connect('mongodb://localhost/userProfiles');
 // Routing
 var router = express.Router();
 
-router.get('/users', function(req, res) {
-  return UserModel.find( function(err, users) {
-    if (!err) {
-      return res.send(users);
-    } else {
-      return console.log(err);
-    }
-  });
-});
+router.get('/users', user.readUsers);
 
 app.use('/api', router);
 
