@@ -20,6 +20,10 @@ mongoose.connect('mongodb://localhost/userProfiles');
 var router = express.Router();
 
 router.get('/users', user.readUsers);
+router.post('/users', user.createUser);
+router.get('/users/:id', user.readSingleUser);
+router.put('/users/:id', user.updateUser);
+router.delete('/users/:id', user.deleteUser);
 
 app.use('/api', router);
 
