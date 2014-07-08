@@ -1,0 +1,10 @@
+{
+  "name": "user-profiles",
+  "description": "CRUD webapp for managing user profiles",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.5.1",
+    "body-parser": "1.4.3"
+  }
+}
