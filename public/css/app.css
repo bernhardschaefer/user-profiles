@@ -1,0 +1,7 @@
+/* app css stylesheet */
+
+#content {
+  margin: 0 20px; /* Fallback if browser does not support viewport-sized typography yet (http://css-tricks.com/viewport-sized-typography/) */ 
+  margin: 0 2vw; /* use 2% of viewport width */
+  clear:both;
+}
