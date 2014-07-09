@@ -3,6 +3,7 @@
 var express = require('express'); //Web framework
 var app = express();
 var bodyParser = require('body-parser');
+var logger = require('morgan');
 var mongoose = require('mongoose'); //MongoDB integration
 
 var user = require('./routes/users');
@@ -12,6 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+app.use(logger()); // placed before static files middleware so that all requests are logged
 app.use(express.static(__dirname + '/public'));
 
 // Configure Database
