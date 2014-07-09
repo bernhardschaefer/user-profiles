@@ -22,7 +22,6 @@ user.readUsers = function(req, res, next) {
 
 user.createUser = function(req, res, next) {
   var user = new UserModel({
-    //TODO add validation
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email,
@@ -41,7 +40,6 @@ user.readSingleUser = function(req, res, next) {
 
 user.updateUser = function(req, res, next) {
   UserModel.findById(req.params.id, function(err, user) {
-    //TODO add validation
     user.first_name = req.body.first_name;
     user.last_name = req.body.last_name;
     user.email = req.body.email;

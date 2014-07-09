@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
   id: Schema.ObjectId,
-  first_name:  String,
-  last_name: String,
+  first_name: {type: String, required: true},
+  last_name: {type: String, required: true},
   email: String
 });
 
