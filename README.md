@@ -1,4 +1,6 @@
-## CRUD webapp for managing user profiles
+## CRUD webapp for managing user profiles (node.js, MongoDB, angularJS)
+
+Installation instructions:
 
 1. Install and start mongodb
 
