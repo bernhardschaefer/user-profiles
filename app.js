@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(logger()); // placed before static files middleware so that all requests are logged
+app.use(logger('combined')); // placed before static files middleware so that all requests are logged
 app.use(express.static(__dirname + '/public'));
 
 // Routing
